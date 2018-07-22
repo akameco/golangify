@@ -1,7 +1,7 @@
 {
   "name": "await-err",
   "version": "0.1.0",
-  "description": "handle err using await with golang style",
+  "description": "Golang like error handling for async/await",
   "license": "MIT",
   "repository": "akameco/await-err",
   "author": "akameco <akameco.t@gmail.com> (akameco.github.io)",
