@@ -27,7 +27,11 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "proxy",
+    "await",
+    "golang",
+    "async",
+    "error"
   ],
   "dependencies": {},
   "devDependencies": {
