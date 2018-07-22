@@ -27,8 +27,12 @@ const main = async () => {
   // => hello
 
   const [result2, err2] = await awaitErr(b)()
-  console.log(err2.message)
-  // => err
+  if (err2 !== null) {
+    console.log(err2.message)
+    // => err
+  }
+  console.log(result2)
+  // => null
 }
 
 main()
