@@ -23,8 +23,8 @@ const b = () => Promise.reject(new Error('err'))
 
 const main = async () => {
   const [result1, err1] = await awaitErr(a)('hello')
-  console.log(result1)
-  // => hello
+  console.log(result1, err2)
+  // => hello null
 
   const [result2, err2] = await awaitErr(b)()
   if (err2 !== null) {
@@ -50,7 +50,7 @@ Type: `function`
 
 return `[result, null]`
 
-#### Failer
+#### Failure
 
 return `[null, err]`
 
