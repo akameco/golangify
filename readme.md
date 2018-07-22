@@ -18,20 +18,19 @@ $ yarn add await-err
 ```js
 const awaitErr = require('await-err')
 
-const a = x => Promise.resolve(x)
-const b = () => Promise.reject(new Error('err'))
+const success = x => Promise.resolve(x + x)
+const failure = () => Promise.reject(new Error('err'))
 
 const main = async () => {
-  const [result1, err1] = await awaitErr(a)('hello')
-  console.log(result1, err2)
-  // => hello null
+  console.log(await awaitErr(success)(1))
+  // => [ 2, null ]
 
-  const [result2, err2] = await awaitErr(b)()
-  if (err2 !== null) {
-    console.log(err2.message)
+  const [result, err] = await awaitErr(failure)()
+  if (err !== null) {
+    console.log(err.message)
     // => err
   }
-  console.log(result2)
+  console.log(result)
   // => null
 }
 
