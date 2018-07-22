@@ -1,9 +1,9 @@
 {
-  "name": "await-err",
+  "name": "golangify",
   "version": "0.1.0",
   "description": "Golang like error handling for async/await",
   "license": "MIT",
-  "repository": "akameco/await-err",
+  "repository": "akameco/golangify",
   "author": "akameco <akameco.t@gmail.com> (akameco.github.io)",
   "engines": {
     "node": ">=6"

@@ -1,4 +1,4 @@
-# await-err
+# golangify
 
 [![Build Status](https://travis-ci.org/akameco/await-err.svg?branch=master)](https://travis-ci.org/akameco/await-err)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
@@ -16,16 +16,16 @@ $ yarn add await-err
 ## Usage
 
 ```js
-const awaitErr = require('await-err')
+const go = require('golangify')
 
 const success = x => Promise.resolve(x + x)
 const failure = () => Promise.reject(new Error('err'))
 
 const main = async () => {
-  console.log(await awaitErr(success)(1))
+  console.log(await go(success)(1))
   // => [ 2, null ]
 
-  const [result, err] = await awaitErr(failure)()
+  const [result, err] = await go(failure)()
   if (err !== null) {
     console.log(err.message)
     // => err
@@ -39,7 +39,7 @@ main()
 
 ## API
 
-### `awaitErr(func)`
+### `golangify(func)`
 
 #### func
 
