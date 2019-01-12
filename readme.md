@@ -18,20 +18,39 @@ $ yarn add golangify
 ```js
 const go = require('golangify')
 
-const success = x => Promise.resolve(x + x)
-const failure = () => Promise.reject(new Error('err'))
-
 const main = async () => {
-  console.log(await go(success)(1))
-  // => [ 2, null ]
+  // Async
+  {
+    const success = x => Promise.resolve(x + x)
+    const failure = () => Promise.reject(new Error('err'))
 
-  const [result, err] = await go(failure)()
-  if (err !== null) {
-    console.log(err.message)
-    // => err
+    console.log(await go(success)(1))
+    // => [ 2, null ]
+
+    const [result, err] = await go(failure)()
+    if (err !== null) {
+      console.log(err.message)
+      // => err
+    }
+    console.log(result)
+    // => null
   }
-  console.log(result)
-  // => null
+
+  // Sync
+  {
+    const successSync = x => x + x
+    const failureSync = () => new Error('err')
+
+    console.log(go(successSync)(1))
+    // => [ 2, null ]
+    const [result, err] = await go(failureSync)()
+    if (err !== null) {
+      console.log(err.message)
+      // => err
+    }
+    console.log(result)
+    // => null
+  }
 }
 
 main()
