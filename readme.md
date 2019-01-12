@@ -43,7 +43,7 @@ const main = async () => {
 
     console.log(go(successSync)(1))
     // => [ 2, null ]
-    const [result, err] = await go(failureSync)()
+    const [result, err] = go(failureSync)()
     if (err !== null) {
       console.log(err.message)
       // => err
