@@ -26,6 +26,7 @@ test('return sync golang style error', () => {
 
 test('return sync golang style with custom error', () => {
   class CustomError extends Error {
+    // eslint-disable-next-line no-useless-constructor
     constructor(...params) {
       super(...params)
     }
