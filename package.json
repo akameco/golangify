@@ -35,12 +35,12 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "all-contributors-cli": "^5.3.0",
-    "eslint": "^5.2.0",
-    "eslint-config-precure": "^2.7.0",
-    "husky": "^0.14.3",
-    "jest": "^23.4.1",
-    "lint-staged": "^7.2.0",
-    "prettier": "^1.13.7"
+    "all-contributors-cli": "5.3.0",
+    "eslint": "5.2.0",
+    "eslint-config-precure": "2.7.0",
+    "husky": "0.14.3",
+    "jest": "23.4.1",
+    "lint-staged": "7.2.0",
+    "prettier": "1.13.7"
   }
 }
