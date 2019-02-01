@@ -37,7 +37,7 @@
   "devDependencies": {
     "all-contributors-cli": "5.11.0",
     "eslint": "5.12.1",
-    "eslint-config-precure": "2.8.1",
+    "eslint-config-precure": "3.5.0",
     "husky": "0.14.3",
     "jest": "23.6.0",
     "lint-staged": "7.2.0",
