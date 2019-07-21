@@ -34,7 +34,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "all-contributors-cli": "6.7.0",
+    "all-contributors-cli": "6.8.1",
     "eslint": "6.0.1",
     "eslint-config-precure": "4.17.0",
     "husky": "3.0.1",
